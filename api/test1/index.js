@@ -1,4 +1,6 @@
 const te = require('tradingeconomics');
+var myTest2Module= require( '../test2/index.js');
+
 
 te.login();
 // data1 = [];
@@ -12,6 +14,7 @@ te.login();
 data3 = {
     counter: 1
 }
+
 
 module.exports = async function (context, req) {
     context.log('JavaScript HTTP trigger function processed a request.');
@@ -27,6 +30,7 @@ module.exports = async function (context, req) {
     context.res = {
         // status: 200, /* Defaults to 200 */
         // body: responseMessage
-        body: data3.counter++
+        // body: data3.counter++
+        body: myTest2Module.counter++
     };
 }
