@@ -9,6 +9,10 @@ te.login();
 
 //data2 = await te.getMarketSnap(symbol = 'aapl:us');
 
+data3 = {
+    counter: 1
+}
+
 module.exports = async function (context, req) {
     context.log('JavaScript HTTP trigger function processed a request.');
     //const responseMessage = await te.getMarketSnap(symbol = 'aapl:us');
@@ -22,6 +26,7 @@ module.exports = async function (context, req) {
     */
     context.res = {
         // status: 200, /* Defaults to 200 */
-        body: responseMessage
+        // body: responseMessage
+        body: data3.counter++
     };
 }
