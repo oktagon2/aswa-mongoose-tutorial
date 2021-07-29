@@ -40,11 +40,11 @@ module.exports = async function (context, req) {
             break;
         // If post, create new task
         case 'POST':
-            await createTask(context);
+            //await createTask(context);
             break;
         // If put, update task
         case 'PUT':
-            await updateTask(context);
+            //await updateTask(context);
             break;
     }
 };
